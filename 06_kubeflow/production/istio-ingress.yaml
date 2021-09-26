@@ -1,0 +1,56 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: alb
+    alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/target-type: ip
+    #alb.ingress.kubernetes.io/auth-idp-cognito: '{"UserPoolArn":"","UserPoolClientId":"","UserPoolDomain":""}'
+    #alb.ingress.kubernetes.io/auth-type: cognito
+    #alb.ingress.kubernetes.io/certificate-arn: "arn:aws:acm:ap-northeast-2:596906176357:certificate/8ec567fd-fd03-4a57-b837-fead72c6d100"
+    #alb.ingress.kubernetes.io/listen-ports: '[{"HTTPS":443}]'
+    #kubectl.kubernetes.io/last-applied-configuration: |
+    #  {"apiVersion":"networking.k8s.io/v1beta1","kind":"Ingress","metadata":{"annotations":{"alb.ingress.kubernetes.io/auth-idp-cognito":"{\"UserPoolArn\":\"\",\"UserPoolClientId\":\"\", \"UserPoolDomain\":\"\"}","alb.ingress.kubernetes.io/auth-type":"cognito","alb.ingress.kubernetes.io/certificate-arn":"","alb.ingress.kubernetes.io/listen-ports":"[{\"HTTPS\":443}]","alb.ingress.kubernetes.io/scheme":"internet-facing","kubernetes.io/ingress.class":"alb"},"labels":{"kustomize.component":"istio-ingress"},"name":"istio-ingress","namespace":"istio-system"},"spec":{"rules":[{"http":{"paths":[{"backend":{"serviceName":"istio-ingressgateway","servicePort":80},"path":"/*"}]}}]}}
+    #kubernetes.io/ingress.class: alb
+  creationTimestamp: "2021-09-26T05:50:22Z"
+  generation: 1
+  labels:
+    kustomize.component: istio-ingress
+  managedFields:
+  - apiVersion: networking.k8s.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:alb.ingress.kubernetes.io/auth-idp-cognito: {}
+          f:alb.ingress.kubernetes.io/auth-type: {}
+          f:alb.ingress.kubernetes.io/certificate-arn: {}
+          f:alb.ingress.kubernetes.io/listen-ports: {}
+          f:alb.ingress.kubernetes.io/scheme: {}
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+          f:kubernetes.io/ingress.class: {}
+        f:labels:
+          .: {}
+          f:kustomize.component: {}
+      f:spec:
+        f:rules: {}
+    manager: kfctl
+    operation: Update
+    time: "2021-09-26T05:50:22Z"
+  name: istio-ingress
+  namespace: istio-system
+  resourceVersion: "687373"
+  selfLink: /apis/extensions/v1beta1/namespaces/istio-system/ingresses/istio-ingress
+  uid: b7a7ef01-664c-4150-9c3a-0ba037a95024
+spec:
+  rules:
+  - http:
+      paths:
+      - backend:
+          serviceName: istio-ingressgateway
+          servicePort: 80
+        path: /*
+        pathType: ImplementationSpecific
+status:
+  loadBalancer: {}

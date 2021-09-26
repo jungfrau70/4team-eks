@@ -1,0 +1,69 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    beta.cloud.google.com/backend-config: '{"ports": {"http2":"iap-backendconfig"}}'
+    # Note that the backend talks over HTTP.
+    service.beta.kubernetes.io/aws-load-balancer-backend-protocol: http
+    # TODO: Fill in with the ARN of your certificate.
+    # service.beta.kubernetes.io/aws-load-balancer-ssl-cert: arn:aws:acm:us-east-1:596906176357:certificate/3d98a8ef-1b56-41a1-9fa6-4a065d58e8ec
+    service.beta.kubernetes.io/aws-load-balancer-ssl-cert: arn:aws:acm:ap-northeast-2:596906176357:certificate/8ec567fd-fd03-4a57-b837-fead72c6d100
+    # Only run SSL on the port named "https" below.
+    service.beta.kubernetes.io/aws-load-balancer-ssl-ports: "https"
+  labels:
+    app: istio-ingressgateway
+    istio: ingressgateway
+  name: istio-ingressgateway
+  namespace: istio-system
+spec:
+  ports:
+  - name: status-port
+    nodePort: 30787
+    port: 15020
+    protocol: TCP
+    targetPort: 15020
+  - name: http2
+    nodePort: 31380
+    port: 80
+    protocol: TCP
+    targetPort: 80
+  - name: https
+    nodePort: 31390
+    port: 443
+    protocol: TCP
+    targetPort: 443
+  - name: tcp
+    nodePort: 31400
+    port: 31400
+    protocol: TCP
+    targetPort: 31400
+  - name: https-kiali
+    nodePort: 31622
+    port: 15029
+    protocol: TCP
+    targetPort: 15029
+  - name: https-prometheus
+    nodePort: 31320
+    port: 15030
+    protocol: TCP
+    targetPort: 15030
+  - name: https-grafana
+    nodePort: 31510
+    port: 15031
+    protocol: TCP
+    targetPort: 15031
+  - name: https-tracing
+    nodePort: 30863
+    port: 15032
+    protocol: TCP
+    targetPort: 15032
+  - name: tls
+    nodePort: 32598
+    port: 15443
+    protocol: TCP
+    targetPort: 15443
+  selector:
+    app: istio-ingressgateway
+    istio: ingressgateway
+  type: LoadBalancer
+  

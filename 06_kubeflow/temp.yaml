@@ -1,0 +1,30 @@
+[?1049h[?1h=[?2004h[1;35r[?12h[?12l[27m[23m[29m[m[H[2J[?25l[35;1H"/tmp/kubectl-edit-v4hd0.yaml" 80L, 2799C[1;1H# Please edit the object below. Lines beginning with a '#' will be ignored,
+# and an empty file will abort the edit. If an error occurs while saving this file will be
+# reopened with the relevant failures.
+#
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    beta.cloud.google.com/backend-config: '{"ports": {"http2":"iap-backendconfig"}}'
+    kubectl.kubernetes.io/last-applied-configuration: |[11;7H{"apiVersion":"v1","kind":"Service","metadata":{"annotations":{"beta.cloud.google.com/backend-config":"{\"ports\": {\"http2\":\"iap-backendconfig\"}}"},"laa[12;1Hbels":{"app":"istio-ingressgateway","chart":"gateways","heritage":"Tiller","istio":"ingressgateway","release":"istio"},"name":"istio-ingressgateway","namespace"::[13;1H"istio-system"},"spec":{"ports":[{"name":"status-port","port":15020,"targetPort":15020},{"name":"http2","nodePort":31380,"port":80,"targetPort":80},{"name":"httpp[14;1Hs","nodePort":31390,"port":443},{"name":"tcp","nodePort":31400,"port":31400},{"name":"https-kiali","port":15029,"targetPort":15029},{"name":"https-prometheus","pp[15;1Hort":15030,"targetPort":15030},{"name":"https-grafana","port":15031,"targetPort":15031},{"name":"https-tracing","port":15032,"targetPort":15032},{"name":"tls","pp[16;1Hort":15443,"targetPort":15443}],"selector":{"app":"istio-ingressgateway","istio":"ingressgateway","release":"istio"},"type":"NodePort"}}
+  creationTimestamp: "2021-09-26T03:57:53Z"
+  labels:
+    app: istio-ingressgateway
+    chart: gateways
+    heritage: Tiller
+    istio: ingressgateway
+    release: istio
+  name: istio-ingressgateway
+  namespace: istio-system
+  resourceVersion: "625523"
+  selfLink: /api/v1/namespaces/istio-system/services/istio-ingressgateway
+  uid: e3120c26-4831-42d4-9ba3-cf07f0c7190a
+spec:
+  clusterIP: 10.100.96.130
+  externalTrafficPolicy: Cluster
+  ports:
+  - name: status-port
+    nodePort: 30926[1;1H[?25h[?25l[35;1HType  :qa  and press <Enter> to exit Vim[35;41H[K[1;1H[?25h[?25l[?25h[?25l[?25h[?25l[?25h[35;1H[?2004l[?2004l[?1l>[?1049lVim: Error reading input, exiting...
+Vim: Finished.
+[35;1H[?25h
