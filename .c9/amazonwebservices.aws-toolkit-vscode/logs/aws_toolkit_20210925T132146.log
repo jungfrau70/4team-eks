@@ -1,0 +1,12 @@
+2021-09-25 13:21:46 [ERROR]: log level: info
+2021-09-25 13:21:46 [INFO]: Retrieving AWS endpoint data
+2021-09-25 13:21:46 [INFO]: OS:  Linux x64 4.14.246-187.474.amzn2.x86_64
+2021-09-25 13:21:46 [INFO]: AWS Cloud9 Extension Host Version:  1.42.0AWS Toolkit Version:  1.27.0-6c4644db65c7
+2021-09-25 13:21:46 [ERROR]: [SyntaxError: Unexpected token ] in JSON at position 203
+	at JSON.parse (<anonymous>)
+	at Function.readEventsFromCache (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:2764:3182)
+	at US.start (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:2764:394)
+	at Module.Og (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/dist/extension.js:2999:828)
+	at async activate (/opt/c9/dependencies/aws-toolkit-vscode/1b236c4bb79003aaa73ec9e75785c63f5eff6ac3d7735eba98627454a59063cc6252a33a010b675b577925df232243d2ddc9296ac4661bf8636eea2cf6e97976/extensionMain.js:28:12)
+	at async Promise.all (index 0)]
+2021-09-25 13:26:48 [INFO]: Successfully sent a telemetry batch of 3

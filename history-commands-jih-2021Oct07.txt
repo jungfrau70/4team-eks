@@ -1,0 +1,84 @@
+ 2323  ls -al
+ 2324  cd 03_opencv-yolo-stream/
+ 2325  ls -al
+ 2326  cat Dockerfile 
+ 2327  dir
+ 2328  cat Dockerfile 
+ 2329  docker build .
+ 2330  clear
+ 2331  docker build .
+ 2332  docker build -t yolov4:1.0 .
+ 2333  docker images
+ 2334  docker images | grep -i yolo
+ 2335  docker run -p 8080:4455 yolov4:1.0
+ 2336  docker build -t yolov4:0.9 .
+ 2337  dir
+ 2338  cd 03_opencv-yolo-stream/
+ 2339  ls -al
+ 2340  docker images
+ 2341  docker images rm yolov4:1.0
+ 2342  docker images remore yolov4:1.0
+ 2343  docker images remove
+ 2344  docker images remove yolov4:1.0
+ 2345  docker remove
+ 2346  docker --help
+ 2347  docker rmi yolov4:1.0
+ 2348  docker rmi yolov4:0.9
+ 2349  docker ps
+ 2350  docker system prune
+ 2351  docker system prune -a
+ 2352  history
+ 2353  docker ps
+ 2354  docker logs ad5320bc5bbc
+ 2355  docker build -t yolov3-k8s:0.1 .
+ 2356  docker tag yolov3-k8s:0.1 596906176357.dkr.ecr.ap-northeast-2.amazonaws.com/opencv-yolo-stream:latest-k8s
+ 2357  docker image ls
+ 2358  docker push 596906176357.dkr.ecr.ap-northeast-2.amazonaws.com/opencv-yolo-stream:latest-k8s
+ 2359  ls
+ 2360  ls -al
+ 2361  kubectl get nodes
+ 2362  kubectl get ns
+ 2363  kubectl create ns yolo
+ 2364  kubectl deploy -f deployment.yaml 
+ 2365  kubectl apply -f deployment.yaml 
+ 2366  kubectl -n yolo get deploy
+ 2367  kubectl -n yolo get po
+ 2368  kubectl -n yolo describe po opencv-yolo-stream-5c74c66f-qx7pd
+ 2369  kubectl -n yolo get po
+ 2370  kubectl -n yolo apply -f service.yaml 
+ 2371  kubectl -n yolo get svc,deploy,ep
+ 2372  kubectl -n yolo apply -f ingress.yaml 
+ 2373  kubectl -n yolo get ingress
+ 2374  kubectl -n yolo get ingress,svc,deploy,ep
+ 2375  kubectl -n yolo deploy -f ingress.yaml 
+ 2376  kubectl -n yolo delete -f ingress.yaml 
+ 2377  kubectl -n yolo apply -f ingress.yaml 
+ 2378  kubectl -n yolo get ingress,svc,deploy,ep
+ 2379  kubectl get po -A
+ 2380  ll
+ 2381  cd ..
+ 2382  ls -al
+ 2383  cd 01_alb-controller/
+ 2384  ls -al
+ 2385  bash 1_install.sh 
+ 2386  ls -al
+ 2387  bash 2_deploy.sh 
+ 2388  kubectl get po -A
+ 2389  kubectl -n yolo get ingress,svc,deploy,ep
+ 2390  cd ..
+ 2391  ll
+ 2392  cd 03_opencv-yolo-stream/
+ 2393  ll
+ 2394  kubectl delete -f ingress.yaml 
+ 2395  kubectl apply -f ingress.yaml 
+ 2396  kubectl -n yolo get ingress,svc,deploy,ep
+ 2397  kubectl delete -f ingress.yaml 
+ 2398  cat ingress.yaml 
+ 2399  kubectl -n yolo get svc
+ 2400  kubectl apply -f ingress.yaml 
+ 2401  kubectl -n yolo get ing
+ 2402  clear
+ 2403  history
+ 2404  cd ..
+ 2405  dir
+ 2406  history > history-commands-jih.txt
