@@ -33,6 +33,7 @@
  2355  docker build -t yolov3-k8s:0.1 .
  2356  docker tag yolov3-k8s:0.1 596906176357.dkr.ecr.ap-northeast-2.amazonaws.com/opencv-yolo-stream:latest-k8s
  2357  docker image ls
+ xxxx  aws ecr get-login-password --region ap-northeast-2 | docker login --username AWS --password-stdin 596906176357.dkr.ecr.ap-northeast-2.amazonaws.com
  2358  docker push 596906176357.dkr.ecr.ap-northeast-2.amazonaws.com/opencv-yolo-stream:latest-k8s
  2359  ls
  2360  ls -al
